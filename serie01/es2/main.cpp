@@ -1,4 +1,5 @@
 #include <fstream>
+#include <iostream>
 
 int main() {
  using namespace std;
@@ -7,10 +8,20 @@ int main() {
  double e{2.71};
  ofstream outf;
  outf.open("mydata");
- outf << lucky << endl;
- outf << pi << endl;
- outf << e << endl;
+ outf << lucky;
+ outf << pi;
+ outf << e;
  outf << "This is an example" << endl;
  outf.flush();
  outf.close();
+
+ // stampo contenuto del file
+ cout << "stampo contenuto del file" << endl;
+
+ ifstream intf;
+ intf.open("mydata");
+ while(intf.good()){
+     cout << intf.rdbuf() << endl;
+ }
+
 }
