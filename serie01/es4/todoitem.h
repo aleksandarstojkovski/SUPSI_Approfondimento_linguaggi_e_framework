@@ -8,8 +8,7 @@
 class TodoItem
 {
 public:
-    TodoItem(std::string titolo, std::string descrizione, int importanza);
-    TodoItem();
+    TodoItem(const std::string &titolo, const std::string &descrizione, int importanza);
     void titolo(std::string titolo);
     void titolo();
 

@@ -1,11 +1,11 @@
 #include "todolist.h"
 #include "todoitem.h"
-#include <iostream> // for cin and cout
+#include <iostream> // for std::cin and std::cout
 #include <vector>  //for std::vector
 
 using namespace std;
 
-void aggiungi(){
+void TodoList::aggiungi(){
 
     string titolo;
     string descrizione;
@@ -19,6 +19,7 @@ void aggiungi(){
     cin >> importanza;
 
     TodoItem todoItem{titolo,descrizione,importanza};
+    m_items.push_back(todoItem);
 
 }
 
